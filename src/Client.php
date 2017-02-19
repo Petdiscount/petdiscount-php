@@ -73,6 +73,16 @@ class Client {
     }
 
     /**
+     * Prepaid Balance
+     */
+
+    public function getPrepaidBalance()
+    {
+        $result = $this->sendRequest('/prepaid');
+        return $result;
+    }
+    
+    /**
      * Enable debug mode gives verbose output on requests and responses
      */
     public function enableDebugmode()
